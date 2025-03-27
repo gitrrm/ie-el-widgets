@@ -317,7 +317,7 @@ class IE_Text_Slider extends Widget_Base
         </style>
 
         <script>
-            const ieTextSlider = function () {
+            const ieTextSlider<?php echo esc_js($unique_id); ?> = function () {
                 var animationEffect = '<?php echo esc_js($settings['animation_type']); ?>';
 
                 var swiperOptions = {
@@ -345,9 +345,9 @@ class IE_Text_Slider extends Widget_Base
 
 
             document.addEventListener("DOMContentLoaded", function () {
-                ieTextSlider();
+                ieTextSlider<?php echo esc_js($unique_id); ?>();
             });
-            ieTextSlider();
+            ieTextSlider<?php echo esc_js($unique_id); ?>();
         </script>
         <?php
     }
