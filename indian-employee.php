@@ -68,6 +68,7 @@ function indian_employee_init() {
             require_once( IE_PLUGIN_DIR . 'includes/widgets/ie-post-slider.php' );
             require_once( IE_PLUGIN_DIR . 'includes/widgets/ie-ticker.php' );
             require_once( IE_PLUGIN_DIR . 'includes/widgets/ie-country-flags.php' );
+            require_once( IE_PLUGIN_DIR . 'includes/widgets/ie-testimonials.php' );
 
             // register widgets
             $widgets_manager->register( new \IE_News_Style_Grid() ); 
@@ -75,6 +76,7 @@ function indian_employee_init() {
             $widgets_manager->register( new \IE_Post_Slider() ); 
             $widgets_manager->register( new \IE_Text_Slider() ); 
             $widgets_manager->register( new \IE_Country_Flags() ); 
+            $widgets_manager->register( new \IE_Testimonial_Slider_Widget() ); 
         }
         add_action( 'elementor/widgets/register', 'register_ie_widgets' );
 

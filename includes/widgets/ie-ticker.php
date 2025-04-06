@@ -19,7 +19,7 @@ class IE_Text_Slider extends Widget_Base
 
     public function get_title()
     {
-        return __('IE Text Slider', 'custom-elementor-widget');
+        return __('IE Text Slider', IE_TEXT_DOMAIN);
     }
 
     public function get_icon()
@@ -38,7 +38,7 @@ class IE_Text_Slider extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __('Content', 'custom-elementor-widget'),
+                'label' => __('Content', IE_TEXT_DOMAIN),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -49,9 +49,9 @@ class IE_Text_Slider extends Widget_Base
         $repeater->add_control(
             'sentence_text',
             [
-                'label' => __('Sentence', 'custom-elementor-widget'),
+                'label' => __('Sentence', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Default Sentence', 'custom-elementor-widget'),
+                'default' => __('Default Sentence', IE_TEXT_DOMAIN),
                 'label_block' => true,
             ]
         );
@@ -60,15 +60,15 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'sentences_list',
             [
-                'label' => __('Sentences with Icons', 'custom-elementor-widget'),
+                'label' => __('Sentences with Icons', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'sentence_text' => __('Trusted by Global Business', 'custom-elementor-widget'),
+                        'sentence_text' => __('Trusted by Global Business', IE_TEXT_DOMAIN),
                     ],
                     [
-                        'sentence_text' => __('Transform Your Business with Our Comprehensive Solutions', 'custom-elementor-widget'),
+                        'sentence_text' => __('Transform Your Business with Our Comprehensive Solutions', IE_TEXT_DOMAIN),
                     ],
                 ],
                 'title_field' => '{{{ sentence_text }}}',
@@ -81,7 +81,7 @@ class IE_Text_Slider extends Widget_Base
         $this->start_controls_section(
             'navigation_section',
             [
-                'label' => __('Navigation', 'custom-elementor-widget'),
+                'label' => __('Navigation', IE_TEXT_DOMAIN),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -89,10 +89,10 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'show_nav',
             [
-                'label' => __('Show Navigation', 'custom-elementor-widget'),
+                'label' => __('Show Navigation', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', 'custom-elementor-widget'),
-                'label_off' => __('No', 'custom-elementor-widget'),
+                'label_on' => __('Yes', IE_TEXT_DOMAIN),
+                'label_off' => __('No', IE_TEXT_DOMAIN),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -101,7 +101,7 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'prev_icon',
             [
-                'label' => __('Previous Button Icon', 'custom-elementor-widget'),
+                'label' => __('Previous Button Icon', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::ICONS,
                 'default' => [
                     'value' => 'fas fa-chevron-left',
@@ -113,7 +113,7 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'next_icon',
             [
-                'label' => __('Next Button Icon', 'custom-elementor-widget'),
+                'label' => __('Next Button Icon', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::ICONS,
                 'default' => [
                     'value' => 'fas fa-chevron-right',
@@ -125,10 +125,10 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'autoplay',
             [
-                'label' => __('Autoplay', 'custom-elementor-widget'),
+                'label' => __('Autoplay', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', 'custom-elementor-widget'),
-                'label_off' => __('No', 'custom-elementor-widget'),
+                'label_on' => __('Yes', IE_TEXT_DOMAIN),
+                'label_off' => __('No', IE_TEXT_DOMAIN),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -137,7 +137,7 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'autoplay_speed',
             [
-                'label' => __('Autoplay Speed (ms)', 'custom-elementor-widget'),
+                'label' => __('Autoplay Speed (ms)', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'ms' => [
@@ -153,13 +153,13 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'animation_type',
             [
-                'label' => __('Animation Type', 'custom-elementor-widget'),
+                'label' => __('Animation Type', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'slide',
                 'options' => [
-                    'slide' => __('Slide', 'custom-elementor-widget'),
-                    'fade' => __('Fade', 'custom-elementor-widget'),                    
-                    'flip' => __('Flip', 'custom-elementor-widget'),
+                    'slide' => __('Slide', IE_TEXT_DOMAIN),
+                    'fade' => __('Fade', IE_TEXT_DOMAIN),                    
+                    'flip' => __('Flip', IE_TEXT_DOMAIN),
                 ],
             ]
         );
@@ -170,7 +170,7 @@ class IE_Text_Slider extends Widget_Base
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __('Title', 'custom-elementor-widget'),
+                'label' => __('Title', IE_TEXT_DOMAIN),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -178,7 +178,7 @@ class IE_Text_Slider extends Widget_Base
         $this->add_control(
             'ie_ts_title_color',
             [
-                'label' => __('Title Color', 'custom-elementor-widget'),
+                'label' => __('Title Color', IE_TEXT_DOMAIN),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} #ie-ts-slider-{{ID}} .slider-title' => 'color: {{VALUE}};',
@@ -190,7 +190,7 @@ class IE_Text_Slider extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'label' => __('Typography', 'custom-elementor-widget'),
+                'label' => __('Typography', IE_TEXT_DOMAIN),
                 'selector' => '{{WRAPPER}} #ie-ts-slider-{{ID}} .slider-content .slider-title',
             ]
         );
@@ -317,7 +317,7 @@ class IE_Text_Slider extends Widget_Base
         </style>
 
         <script>
-            const ieTextSlider<?php echo esc_js($unique_id); ?> = function () {
+            function ieTextSlider() {
                 var animationEffect = '<?php echo esc_js($settings['animation_type']); ?>';
 
                 var swiperOptions = {
@@ -345,9 +345,9 @@ class IE_Text_Slider extends Widget_Base
 
 
             document.addEventListener("DOMContentLoaded", function () {
-                ieTextSlider<?php echo esc_js($unique_id); ?>();
+                ieTextSlider();
             });
-            ieTextSlider<?php echo esc_js($unique_id); ?>();
+            ieTextSlider();
         </script>
         <?php
     }
