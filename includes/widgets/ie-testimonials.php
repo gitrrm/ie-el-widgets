@@ -1119,8 +1119,8 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [ // Still needs a key here, but we'll force the unit in the selector
-                        'min' => -50,
-                        'max' => 50,
+                        'min' => -150,
+                        'max' => 150,
                     ],
                 ],
                 'default' => [
@@ -1257,10 +1257,10 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em', 'rem'],
                 'default' => [
-                    'top' => 10,
-                    'right' => 10,
-                    'bottom' => 10,
-                    'left' => 10,
+                    'top' => 5,
+                    'right' => 5,
+                    'bottom' => 5,
+                    'left' => 5,
                     'unit' => 'px',
                 ],
                 'selectors' => [
@@ -1593,7 +1593,7 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
                         },
                         slideChangeTransitionEnd: function () {
                             // Update testimonial content when the slide changes
-                            var activeIndex = testimonialSwiper.realIndex; // Get the current active index
+                            var activeIndex = this.realIndex; // Get the current active index
                             updateTestimonialContent(activeIndex);
                         }
                     }
@@ -1622,7 +1622,9 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
             ieTestimonialSlider();
 
             // Function to update testimonial content based on index
-            function updateTestimonialContent(index) {
+            function updateTestimonialContent(index = 0) {
+                console.log("testimonialsData: ",index);
+                
                 if (testimonialsData[index]) {
                     // Update testimonial title and text
                     document.querySelector('.data-wrapper .testimonial-data').innerHTML =
