@@ -3,8 +3,8 @@
  * Plugin Name: Indian Employee Addons
  * Description: A collection of custom Elementor widget for Indian Employee website.
  * Version: 1.0.0
- * Author: Indian Employee
- * Author URI: https://indianemployee.com
+ * Author: Rashmi Ranjan Muduli
+ * Author URI: https://github.com/gitrrm/ie-el-widgets
  * License: GPL2
  * Text Domain: indian-employee
  * Domain Path: /languages
