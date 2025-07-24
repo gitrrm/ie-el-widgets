@@ -1403,7 +1403,8 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
                 </div>
                 <div class="testimonial-details">
                     <div class="testimonial-rating">
-                        <?php echo $this->render_rating_stars($testimonial['rating']); ?>
+                        <!-- The rating is coming from javascript -->
+                        <!-- <?php echo $this->render_rating_stars($testimonial['rating']); ?> -->
                     </div>
                     <div class="testimonial-data">
 
@@ -1623,8 +1624,6 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
 
             // Function to update testimonial content based on index
             function updateTestimonialContent(index = 0) {
-                console.log("testimonialsData: ",index);
-                
                 if (testimonialsData[index]) {
                     // Update testimonial title and text
                     document.querySelector('.data-wrapper .testimonial-data').innerHTML =
@@ -1660,10 +1659,6 @@ class IE_Testimonial_Slider_Widget extends Widget_Base
 
                 return html;
             }
-
-
-
-
         </script>
         <?php
     }
